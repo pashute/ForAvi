@@ -1,0 +1,21 @@
+{
+  "name": "foravi-backend",
+  "version": "0.1.0",
+  "description": "Backend API for ForAvi collaborative AI interface",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["ai", "chat", "langchain", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "langchain": "^0.3.7",
+    "@langchain/openai": "^0.3.15"
+  }
+}
