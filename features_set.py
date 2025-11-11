@@ -24,7 +24,15 @@ class FeaturesSet:
         
         Returns:
             bool: True if feature was added, False if it already exists
+        
+        Raises:
+            ValueError: If name or description is not a valid string
         """
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError("Feature name must be a non-empty string")
+        if not isinstance(description, str):
+            raise ValueError("Feature description must be a string")
+        
         if name in self._features:
             return False
         
@@ -145,9 +153,9 @@ if __name__ == '__main__':
     features = FeaturesSet()
     
     # Add some features
-    features.add_feature('ai_steering', 'Collaborative AI steering capability', True)
-    features.add_feature('multi_user', 'Support for multiple users', True)
-    features.add_feature('voice_input', 'Voice input for AI commands', False)
+    features.add_feature('ai_steering', 'Collaborative AI steering capability', enabled=True)
+    features.add_feature('multi_user', 'Support for multiple users', enabled=True)
+    features.add_feature('voice_input', 'Voice input for AI commands', enabled=False)
     
     # List all features
     print("All features:")
