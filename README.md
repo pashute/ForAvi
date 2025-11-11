@@ -1,5 +1,5 @@
 # ForAvi
-Colaborative Steered AI interface
+Collaborative Steered AI interface
 
 ## Development Workflow
 
